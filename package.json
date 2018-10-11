@@ -4,12 +4,16 @@
   "description": "project for story tracking",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \" npm start server \" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
@@ -19,5 +23,9 @@
     "mongoose": "^5.2.4",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0"
+  },
+  "scriptsComments": {
+    "client": "cd in to the client directory and runs the client server",
+    "dev": "concurrently runs both client and server together at the same time, backslashes are used to escape double quotes"
   }
 }
