@@ -56,7 +56,7 @@ app.use((req, res, next) => {
 // use auth Routes : anything that routes to /auth goes to auth.js
 app.use("/auth", auth);
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 // start the server and loisten on the port
 app.listen(port, () => {
   // res.send('HELLO');
