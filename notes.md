@@ -34,3 +34,10 @@
 2.  create dummy components
 3.  use react router dom
 4.  update the app with browserRoutes and notice the Landing component appear on the hoem page
+
+## section5: customise header component
+
+1.  create a header class component
+2.  add materialize css and show react style on materialize UI. however since its all js based styling its difficult to customize when compared to css styling
+3.  add npm install materialize-css@next to client package.json
+4.  check if materialize is installed in node modules and import the materialize.min.css and import in index.js
