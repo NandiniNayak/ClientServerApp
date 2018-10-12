@@ -27,3 +27,10 @@
 
 - redux store contains all the states
 - import provider from react-redux
+
+## section4: react router
+
+1.  In App.js import from react-router-dom
+2.  create dummy components
+3.  use react router dom
+4.  update the app with browserRoutes and notice the Landing component appear on the hoem page
