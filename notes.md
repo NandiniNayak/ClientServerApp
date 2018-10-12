@@ -12,3 +12,18 @@
 10. Note: in dev mode proxy is needed, however in production mode we don't have to change the proxy server path.
 11. reason: In production create react app is not needed, run npm run build to generate a bundle js file which access the express app directly.
 12. $ npm run build
+
+### section 2: set up client react
+
+1.  cd client
+2.  delete files in src of client except registerService Worker.js
+3.  install redux, react-router-dom react-redux
+4.  create index.js in client/src
+5.  namng convention: If a js file exports component use uppercase eg: App.js, if a js file does not export component use lowercase, eg: index.j
+6.  cd back to server
+7.  npm run dev
+
+## section 3: Redux
+
+- redux store contains all the states
+- import provider from react-redux
