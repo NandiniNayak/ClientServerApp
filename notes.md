@@ -41,3 +41,17 @@
 2.  add materialize css and show react style on materialize UI. however since its all js based styling its difficult to customize when compared to css styling
 3.  add npm install materialize-css@next to client package.json
 4.  check if materialize is installed in node modules and import the materialize.min.css and import in index.js
+
+## section 6: show current user on Login
+
+1.  add container to div on App component
+2.  check if user is logged in
+3.  add a route(api/current_user) to auth.js in server
+4.  how data is fetched into react-redux app
+5.  Create an action creater that makes ajax call to api/current_user on express server: refer slide 58
+6.  add proxy rules for current user api
+7.  install axios library: to make ajax call to server and redux thunk to maintain asynchronous actions
+8.  install these libraries in client
+9.  Add reduxThunk to index.js
+10. create action/index.js - action creaters
+11. update client package.json to handle api/current_user proxy : use api/\* to direct anything followed by api to be directed to route 5000

@@ -16,7 +16,7 @@ const App = () => {
   4. header is not specific to path it appears on every path, hence use it like any other component*/
 
   return (
-    <div>
+    <div className="container">
       <BrowserRouter>
         <div>
           <Header />
