@@ -35,4 +35,9 @@ router.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
+// path to to get current logged in user
+app.get("api/current_user", (req, res) => {
+  res.send(req.user);
+});
+
 module.exports = router;
