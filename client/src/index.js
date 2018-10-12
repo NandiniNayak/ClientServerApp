@@ -1,3 +1,6 @@
+// Note: webpack compiles both css and js files and while importing css files the extension is must, unlike js files
+// import materializeCSS from "materialize-css/dist/css/materialize.min.css"; can be written as follows
+import "materialize-css/dist/css/materialize.min.css";
 import React from "react";
 import ReactDOM from "react-dom";
 // provider is a component that makes redux store accessible to every component in teh react App component
