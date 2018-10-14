@@ -52,6 +52,18 @@
 6.  add proxy rules for current user api
 7.  install axios library: to make ajax call to server and redux thunk to maintain asynchronous actions
 8.  install these libraries in client
-9.  Add reduxThunk to index.js
-10. create action/index.js - action creaters
-11. update client package.json to handle api/current_user proxy : use api/\* to direct anything followed by api to be directed to route 5000
+
+## section 7: Redux Thunk
+
+1.  Add reduxThunk to index.js
+2.  create action/index.js - action creaters
+3.  update client package.json to handle api/current_user proxy : use api/\* to direct anything followed by api to be directed to route 5000
+4.  generate action creators
+5.  add action creator (fetchUser) to app component - find the location whch cares about user logged in:(since user login featured is checked across the app, App.js is the best place to include fetchUser action creator)
+6.  Refer the slide: React API call to server, data fetched and state updated
+7.  start the server $ npm run dev
+8.  notice in the console the react dispatch action with the type fetch_user and the payload with the google login info
+
+## section 8: check return state from reducer - change the content on header absed on if the user is logged in or not
+
+1.  Note: eg: User log in process will take a while than expected sometime based on say netwrok speed, under this circumstance what needs to be shown say on the header component needs to be determined: hence we need to hadle three situation from redux: ref slide: Reducer return state: User Login Check
