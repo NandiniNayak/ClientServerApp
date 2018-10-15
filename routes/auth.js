@@ -30,7 +30,7 @@ router.get("/verify", (req, res) => {
 });
 // vitsit http://localhost:3000/auth/verify
 //logout
-router.get("/logout", (req, res) => {
+router.get("/api/logout", (req, res) => {
   req.logout();
   res.redirect("/");
 });
