@@ -64,6 +64,15 @@
 7.  start the server $ npm run dev
 8.  notice in the console the react dispatch action with the type fetch_user and the payload with the google login info
 
-## section 8: check return state from reducer - change the content on header absed on if the user is logged in or not
+## section 7b: check return state from reducer - change the content on header absed on if the user is logged in or not
 
 1.  Note: eg: User log in process will take a while than expected sometime based on say netwrok speed, under this circumstance what needs to be shown say on the header component needs to be determined: hence we need to hadle three situation from redux: ref slide: Reducer return state: User Login Check
+
+## section 8: How to connect a component to redux store and fetch auth piece of state to find if user is logged in or not
+
+1.  import connect helper from redux store
+2.  define map state and props function
+3.  define pieces of info that we care about in the function: for example in this case it would be the auth state
+4.  Note: update the internet speed next to online tab in network section.
+    a. log out and log back in: notice the content on the left corener of the header changes from from logged out -> still deciding - log-in: this rapid change of content is not good for the user, they would have no clue whats happening:
+    Soultion
