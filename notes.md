@@ -81,7 +81,7 @@
 
 1.  Update the logo on the header with the link tag to navigate to a different route rendered by react router: note: Link tag is a inbuilt library from react router
 
-## section 10:
+## section 10: Stripe
 
 1.  Make checkout stripe lib work well with react https://github.com/azmenak/react-stripe-checkout/blob/master/package.json
 2.  cd client
@@ -112,3 +112,15 @@
 
 12. implement Payment.js
 13. after clicking pay with card notice the object in console. onky the last 4 digits of card is received not entire. if you ever want to verify the user in your app you can only use those 4 digits but you will never have access to the entire credit card
+
+14. find npm packages on https://www.npmjs.com/
+    https://stripe.com/docs/api?lang=node
+    get the charge object : https://stripe.com/docs/api/charges/object?lang=node
+
+15. on the server side:
+    1.  run npm install--save stripe
+    2.
+
+## note:
+
+1.  react-stripe-checkout is used on client side to implement the button, get teh card details and the token generated is passed on to the server side stripe
