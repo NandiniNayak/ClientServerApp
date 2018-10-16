@@ -5,5 +5,7 @@ module.exports = {
   // connect to Atlas mongo: https://www.mongodb.com/cloud/atlas
   mongoURI: process.env.MONGO_URI,
   googleClientID: process.env.GOOGLE_CLIENT_ID,
-  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET
-}
+  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+  stripeSecretKey: process.env.STRIPE_SECRET_KEY
+};
