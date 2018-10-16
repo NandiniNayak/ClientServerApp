@@ -2,6 +2,8 @@ import React, { Component } from "react";
 // to connect a component to redux store:
 // step1: import connect
 import { connect } from "react-redux";
+// import link component from react router dom : link is like <a> tag but allows you to render a corresponding react router with a logic in place: eg: link clicked can take you to a corresponsing page based on if the user is logged in or not
+import { Link } from "react-router-dom";
 class Header extends Component {
   // display content based on if user is oogged in or not
   renderConetnt() {
@@ -31,13 +33,17 @@ class Header extends Component {
   }
   render() {
     console.log(this.props);
+    // add link to the brand with a logic to check if user logged in take to the dashboard else go to home page, hence instaed of a tag we need the logic in place which checks for users authentication
     return (
       <div>
         <nav>
           <div className="nav-wrapper">
-            <a href="#" className="left brand-logo">
+            <Link
+              to={this.props.auth ? "/dashboard" : "/"}
+              className="left brand-logo"
+            >
               Emaily
-            </a>
+            </Link>
             <ul id="nav-mobile" className="right">
               {this.renderConetnt()}
             </ul>
