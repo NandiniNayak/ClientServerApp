@@ -80,3 +80,35 @@
 ## section 9: Landing page component:
 
 1.  Update the logo on the header with the link tag to navigate to a different route rendered by react router: note: Link tag is a inbuilt library from react router
+
+## section 10:
+
+1.  Make checkout stripe lib work well with react https://github.com/azmenak/react-stripe-checkout/blob/master/package.json
+2.  cd client
+3.  npm install --save react-stripe-checkout
+4.  stripe api keys:
+5.  cd ..
+6.  npm run dev
+    5: put api keys at right place on server side and client side:
+7.  server side-> congig-> dev and prod
+8.  on front end of app : we have es2016 modules -> on es2015 we cant execute any logic to check if dev or production before importing:
+    eg: if (prod) {
+    import 'prod'
+    } else {
+    import 'dev'
+    }
+    this is not allowed.
+9.  solution : client side only cares about PublishableKey
+
+- create react app environment variables
+  https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables
+  Note: You must create custom environment variables beginning with REACT*APP*
+
+10. create 2 files in client directory:
+1.  .env.development
+1.  .env.production
+
+11) react stripe checkout: https://github.com/azmenak/react-stripe-checkout/blob/master/package.json
+
+12. implement Payment.js
+13. after clicking pay with card notice the object in console. onky the last 4 digits of card is received not entire. if you ever want to verify the user in your app you can only use those 4 digits but you will never have access to the entire credit card

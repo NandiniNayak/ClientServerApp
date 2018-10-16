@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 // import link component from react router dom : link is like <a> tag but allows you to render a corresponding react router with a logic in place: eg: link clicked can take you to a corresponsing page based on if the user is logged in or not
 import { Link } from "react-router-dom";
+import Payments from "./Payments";
 class Header extends Component {
   // display content based on if user is oogged in or not
   renderConetnt() {
@@ -24,10 +25,16 @@ class Header extends Component {
       // if logged in
       default:
         // return "I am logged in";
+        // return an array of li elements
         return (
-          <li>
-            <a href="auth/api/logout">Logout</a>
-          </li>
+          <ul>
+            <li>
+              <Payments />
+            </li>
+            <li>
+              <a href="auth/api/logout">Logout</a>
+            </li>
+          </ul>
         );
     }
   }
