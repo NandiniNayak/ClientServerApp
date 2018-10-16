@@ -12,6 +12,7 @@ require("./config/passport")(passport);
 
 //Load routes
 const auth = require("./routes/auth");
+const billing = requires("./routes/billing");
 
 // Load mongoose keys
 const keys = require("./config/keys");
@@ -55,6 +56,7 @@ app.use((req, res, next) => {
 });
 // use auth Routes : anything that routes to /auth goes to auth.js
 app.use("/auth", auth);
+app.use("/billing", billing);
 
 var port = process.env.PORT || 5000;
 // start the server and loisten on the port
