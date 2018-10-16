@@ -76,3 +76,7 @@
 4.  Note: update the internet speed next to online tab in network section.
     a. log out and log back in: notice the content on the left corener of the header changes from from logged out -> still deciding - log-in: this rapid change of content is not good for the user, they would have no clue whats happening:
     Soultion
+
+## section 9: Landing page component:
+
+1.  Update the logo on the header with the link tag to navigate to a different route rendered by react router: note: Link tag is a inbuilt library from react router
