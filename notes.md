@@ -123,4 +123,10 @@
 
 ## note:
 
-1.  react-stripe-checkout is used on client side to implement the button, get teh card details and the token generated is passed on to the server side stripe
+1.  react-stripe-checkout is used on client side to implement the button, get the card details and the token generated is passed on to the server side stripe
+
+## Section 12: Add credits to User
+
+1.  run npm install --save body-parser
+2.  handletoken function at the client side call post method ('/billing/api/stripe') which calls a backend server to capture the info from the stripe checkout form
+3.

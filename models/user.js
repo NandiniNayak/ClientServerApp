@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 //create Schema
@@ -19,7 +19,12 @@ const UserSchema = new Schema({
   },
   image: {
     type: String
+  },
+  // credits for user
+  credits: {
+    type: Number,
+    default: 0
   }
 });
 // create collection and add schema
-mongoose.model('users', UserSchema);
+mongoose.model("users", UserSchema);

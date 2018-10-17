@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const passport = require("passport");
+const bodyParser = require("body-parser");
 
 // Load User model
 
@@ -12,7 +13,7 @@ require("./config/passport")(passport);
 
 //Load routes
 const auth = require("./routes/auth");
-const billing = requires("./routes/billing");
+const billing = require("./routes/billing");
 
 // Load mongoose keys
 const keys = require("./config/keys");
@@ -35,6 +36,12 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("HOME");
 });
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 app.use(cookieParser());
 app.use(
