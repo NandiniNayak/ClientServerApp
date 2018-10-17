@@ -9,6 +9,7 @@ class Header extends Component {
   // display content based on if user is oogged in or not
   renderConetnt() {
     // note: monitor how the state of the header transition from still deciding to logged in to logout: when the user logs in and logs out
+    // note: VVI: the props is not being passed to the header component from App, the props here is refereing to the reducer : authReducer
     console.log(`the value of the auth state is: ${this.props.auth}`);
     switch (this.props.auth) {
       // if user not logged in
@@ -30,6 +31,9 @@ class Header extends Component {
           <ul>
             <li>
               <Payments />
+            </li>
+            <li style={{ margin: "0 10px" }}>
+              Credits: {this.props.auth.credits}
             </li>
             <li>
               <a href="auth/api/logout">Logout</a>
